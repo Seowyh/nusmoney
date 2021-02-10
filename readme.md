@@ -32,4 +32,11 @@ https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlif
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/Seowyh/nusmoney"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 
+After deployment, NUS Money App 1.0 is live in the link:  
+
+https://nusmoney.netlify.app  
+
+
 ## Automation
+
+

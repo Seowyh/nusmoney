@@ -43,6 +43,8 @@ Github Action can provide the necessary automation to notify team members of a p
 
 The workflows are listed in the yml file found under .github\workflows  
 
+![](/images/Github_workflow.jpg)
+
 Screenshots of the Github Actions and Slack Notifications are shown below:  
 
 ![](/images/Slack_Message.jpg)

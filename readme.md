@@ -10,4 +10,23 @@ Netlify will be hosting the static web assets. In addition, it will provide serv
 ![](/images/NUSmoney20.jpg)
 
 
+## Deploy to Netlify
+
+Since we already have the code for NUS Money 1.0, we can create a Github repository and deploy to Netlify.
+
+Make the NUS Money app 1.0 the current folder and execute the git commands:
+git init
+git add .
+git commit -m "v1.0 NUS Money"
+
+git remote add origin _*your Repo URL*_
+git remote -v # (to verify that the correct repo URL is entered
+git push origin main # (may need to input your email and username for config )
+
+To deploy the code in your Github repo to Netlify, follow the guide below or use the deploy button.
+
+https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
+
+https://app.netlify.com/start/deploy?repository=https://github.com/Seowyh/nusmoney
+
 ## Automation

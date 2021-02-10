@@ -28,7 +28,6 @@ To deploy the code in your Github repo to Netlify, follow the guide below or use
 
 https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 
-
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/Seowyh/nusmoney"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 
@@ -38,7 +37,3 @@ https://nusmoney.netlify.app
 
 
 ## Automation
-
-
-
-

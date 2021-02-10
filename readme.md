@@ -39,8 +39,12 @@ https://nusmoney.netlify.app
 
 ## CI/CD Automation
 
-Github Action can provide the necessary automation to notify team members of a push/pull event, test, build and deploy the new code into Netlify.
+Github Action can provide the necessary automation to notify team members of a push/pull event, test, build and deploy the new code into Netlify.  
 
-The workflows are listed in the yml file found under .github\workflows
+The workflows are listed in the yml file found under .github\workflows  
 
+Screenshots of the Github Actions and Slack Notifications are shown below:  
 
+![](/images/Slack_Message.jpg)
+
+![](/images/Action_Slack.jpg)

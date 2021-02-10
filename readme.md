@@ -14,7 +14,7 @@ Netlify will be hosting the static web assets. In addition, it will provide serv
 
 Since we already have the code for NUS Money 1.0, we can create a Github repository and deploy to Netlify.
 
-Make the NUS Money app 1.0 the current folder and execute the git commands:
+Make the NUS Money app 1.0 the current folder and execute the git commands
 git init
 git add .
 git commit -m "v1.0 NUS Money"

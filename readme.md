@@ -1,6 +1,6 @@
-#DevOps Show and Tell 
+# DevOps Show and Tell 
 
-##Objectives
+## Objectives
 
 The objective of this project is to migrate the NUS Money app 1.0 from localhost environment to cloud based.
 

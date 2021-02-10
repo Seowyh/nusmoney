@@ -37,7 +37,7 @@ After deployment, NUS Money App 1.0 is live in the link:
 https://nusmoney.netlify.app  
 
 
-## Automation
+## CI/CD Automation
 
 
 

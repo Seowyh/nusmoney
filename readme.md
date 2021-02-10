@@ -21,19 +21,19 @@ git add .
 git commit -m "v1.0 NUS Money"  
 
 git remote add origin _**your Repo URL**_  
-git remote -v # (to verify that the correct repo URL is entered)  
-git push origin main # (may need to input your email and username for configuration first )  
+git remote -v    # (to verify that the correct repo URL is entered)  
+git push origin main    # (may need to input your email and username for configuration first )  
 
 To deploy the code in your Github repo to Netlify, follow the guide below or use the deploy button.  
 
 https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
-
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/Seowyh/nusmoney"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 
 After deployment, NUS Money App 1.0 is live in the link:  
 
-https://nusmoney.netlify.app
+https://nusmoney.netlify.app  
+
 
 ## Automation

@@ -16,19 +16,15 @@ Since we already have the code for NUS Money 1.0, we can create a Github reposit
 
 Make the NUS Money app 1.0 the current folder and execute the git commands:
 
-git init
+git init  
+git add .  
+git commit -m "v1.0 NUS Money"  
 
-git add .
+git remote add origin _**your Repo URL**_  
+git remote -v # (to verify that the correct repo URL is entered)  
+git push origin main # (may need to input your email and username for configuration first )  
 
-git commit -m "v1.0 NUS Money"
-
-git remote add origin _**your Repo URL**_
-
-git remote -v # (to verify that the correct repo URL is entered)
-
-git push origin main # (may need to input your email and username for configuration first )
-
-To deploy the code in your Github repo to Netlify, follow the guide below or use the deploy button.
+To deploy the code in your Github repo to Netlify, follow the guide below or use the deploy button.  
 
 https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 

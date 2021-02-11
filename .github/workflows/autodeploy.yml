@@ -1,26 +1,46 @@
 name: Auto Deploy
 on:
   push:
-    branches: [main] # run on pushes to master
+    branches: [main] # run on pushes to main. was master in previous version
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+
+      # ( Build to ./dist or other directory... )
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1
         with:
-          node-version: '12'
-      - run: npm install
-      #- run: npm test
-      # deploy site to netlify using secrets created on repository
-      - uses: netlify/actions/cli@master
-      - uses: jsmrcaga/action-netlify-deploy@master
+          publish-dir: './dist'
+          production-branch: main
+        #  github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        with:
-          args: deploy --dir=dist --prod
-          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+        timeout-minutes: 1
+
+  # build-and-test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v2
+  #       with:
+  #         node-version: '12'
+  #     - run: npm install
+  #     # deploy site to netlify using secrets created on repository
+  #     - uses: jsmrcaga/action-netlify-deploy@master
+  #       env:
+  #         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  #         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+  #       with:
+  #         args: deploy --dir=dist --prod
+  #         secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
   slackNotification:
     name: Slack Notification
     runs-on: ubuntu-latest
@@ -30,12 +50,3 @@ jobs:
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-  # slackNotificationArg:
-  #   name: Slack Notification
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     uses: Ilshidur/action-slack@2.0.2
-  #     with:
-  #       args: 'A new slack notification with arguments. ' # Optional
-  #     env:
-  #       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

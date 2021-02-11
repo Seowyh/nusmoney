@@ -67,7 +67,7 @@ _**Site overview > General > Site details > API ID**_
 for SLACK_WEBHOOK  
 _**go to beginning of your channel**_  
 _**Connect an app > Incoming WebHooks > Add to Slack >**_  
-Under_** Post to Channel**_ Choose a channel as your target to post  
+Under  _** Post to Channel**_   Choose a channel as your target to post  
 _**Add Incoming Webhooks Integration > Webhook URL**_  
 
 To set up your repository environment with the above keys, go to your repo:  

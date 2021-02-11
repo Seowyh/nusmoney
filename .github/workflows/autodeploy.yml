@@ -16,11 +16,11 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
-       - run: npm ci # install dependencies
+      # - run: npm ci # install dependencies
       # - run: npm run build --if-present # build the project
       # - run: npm run test:unit # run the tests
       # deploy site to netlify using secrets created on repository
-      #- uses: netlify/actions/cli@master
+      - uses: netlify/actions/cli@master
       - uses: jsmrcaga/action-netlify-deploy@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

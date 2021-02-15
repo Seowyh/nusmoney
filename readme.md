@@ -46,11 +46,6 @@ The workflows are listed in the yml file found under .github\workflows
 
 ![](/images/Github_workflow.jpg)  
 
-Screenshots of the Github Actions and Slack Notifications are shown below:  
-
-![](/images/Slack_Message.jpg)  
-
-
 
 Once the workflow is ready, we can disable the auto deploy function in Netlify. Head to your site in Netlify:
 _**Deploys > Stop auto publishing**_  
@@ -73,6 +68,11 @@ _**Add Incoming Webhooks Integration > Webhook URL**_
 To set up your repository environment with the above keys, go to your Github repo:
 _**Settings > Secrets > New repository secret**_  
   
+Screenshots of the Github Actions and Slack Notifications are shown below:  
+
+![](/images/Slack_Message.jpg)  
+
+
 ## To Use or Not to Use  
 
 While we have chosen serverless functions for this project, there are other services we could explore based on different scenarios.  

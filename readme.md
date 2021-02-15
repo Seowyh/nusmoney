@@ -10,6 +10,7 @@ Netlify will be hosting the static web assets. In addition, it will provide serv
 ![](/images/NUSmoney20.jpg)  
 
 
+
 ## Deploy to Netlify  
 
 Since we already have the code for NUS Money 1.0, we can create a Github repository and deploy to Netlify.   
@@ -52,25 +53,39 @@ Screenshots of the Github Actions and Slack Notifications are shown below:
 ![](/images/Action_Slack.jpg)  
 
 
-Once the workflow is ready, we can disable the auto deploy function in Netlify. Head to your site in Netlify:  
+Once the workflow is ready, we can disable the auto deploy function in Netlify. Head to your site in Netlify:
 _**Deploys > Stop auto publishing**_  
 
 In order for Github Action to trigger the workflow in Netlify and Slack, you need to get the Secrets(bearer token) for the formal or use webhook for the later. Keep the tokens in a safe location.  
 
-for NETLIFY_AUTH_TOKEN  
-_**go to your account by clicking on top right corner icon**_  
+for NETLIFY_AUTH_TOKEN
+_**go to your account by clicking on top right corner icon**_
 _**User settings > Appications > Personal access tokens**_  
 
-for NETLIFY_SITE_ID  
+for NETLIFY_SITE_ID
 _**Site overview > General > Site details > API ID**_  
 
 for SLACK_WEBHOOK  
-_**go to beginning of your channel**_  
-_**Connect an app > Incoming WebHooks > Add to Slack >**_  
-Under  _**Post to Channel**_  Choose a channel as your target to post  
+_**go to beginning of your channel**_
+_**Connect an app > Incoming WebHooks > Add to Slack >**_
+Under  _**Post to Channel**_  Choose a channel as your target to post
 _**Add Incoming Webhooks Integration > Webhook URL**_  
 
-To set up your repository environment with the above keys, go to your Github repo:  
+To set up your repository environment with the above keys, go to your Github repo:
 _**Settings > Secrets > New repository secret**_  
+  
+## To Use or Not to Use  
+
+While we have chosen serverless functions for this project, there are other services we could explore based on different scenarios.  
+
+Serverless functions are well suited for new applications where you start everything fresh or when there is little legacy code that you can easily port over. It should be considered only when longer respond time due to cold start is tolerable. It provides huge cost benefits with the ability to scale to zero.  
+
+Serverless containers shines when there are existing codes, that has been written in any language, to migrate. It allows you to expose fewer URI endpoints and, thus, reduces vulnerability. Mulitiple concurrent instances can be executed. Billing is done only on the total duration of a concurrent execution thereby providing additional cost benefits on top of the scale to zero feature.  
+
+Kubernetes should be considered for large, complex enterprise applications whereby control over the deployment is necessary. It 
+Complex administration, authorisation, 
+
+Hybrid model. Can coexist.
 
 
+![](/images/Compare_services.jpg)

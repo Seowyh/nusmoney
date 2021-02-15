@@ -50,7 +50,6 @@ Screenshots of the Github Actions and Slack Notifications are shown below:
 
 ![](/images/Slack_Message.jpg)  
 
-![](/images/Action_Slack.jpg)  
 
 
 Once the workflow is ready, we can disable the auto deploy function in Netlify. Head to your site in Netlify:
@@ -78,13 +77,13 @@ _**Settings > Secrets > New repository secret**_
 
 While we have chosen serverless functions for this project, there are other services we could explore based on different scenarios.  
 
+![](/images/Compare_services.jpg)
+
 Serverless functions are well suited for new applications where you start everything fresh or when there is little legacy code that you can easily port over. It should be considered only when longer respond time due to cold start is tolerable. It provides huge cost benefits with the ability to scale to zero.  
 
-Serverless containers shine when there are existing codes, that have been written in any language, to migrate. It allows you to expose fewer URI endpoints and, thus, reduces vulnerability. Multiple concurrent instances can be executed. Billing is done only on the total duration of a concurrent execution thereby providing additional cost benefits on top of the scale to zero feature.
+Serverless containers shine when there are existing codes, that have been written in any language, to migrate. It allows you to expose fewer URI endpoints and, thus, reduces vulnerability. Multiple concurrent instances can be executed. Billing is done only on the total duration of a concurrent execution thereby providing additional cost benefits on top of the scale to zero feature.  
 
-Kubernetes should be considered for large, complex enterprise applications whereby orchestrating a large number of containers and control over the deployment, scaling, load balancing and access are necessary. Thanks to the keen competitions in the cloud platform, employing Kubernetes services has become very affordable especially when you can commit to a longer term contract such as 1 - 3 years.
+Kubernetes should be considered for large, complex enterprise applications whereby orchestrating a large number of containers and control over the deployment, scaling, load balancing and access are necessary. Thanks to the keen competitions in the cloud platform, employing Kubernetes services has become very affordable especially when you can commit to a longer term contract such as 1 - 3 years.  
 
-Finally, the selection of various services are not mutually exclusive. A hybrid model can be used. For example, an enterprise application may use Kubernetes primarily while fanning out ancillary lightweight features to serverless functions or containers.
+Finally, the selection of various services are not mutually exclusive. A hybrid model can be used. For example, an enterprise application may use Kubernetes primarily while fanning out ancillary lightweight features to serverless functions or containers.  
 
-
-![](/images/Compare_services.jpg)
